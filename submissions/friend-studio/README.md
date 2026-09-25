@@ -80,7 +80,7 @@ Everything stays inside the SDK's 960 × 640 frame, with touch, keyboard, mute, 
 SDK runtime and sandbox with a mocked wallet and mocked RPC (recorded public mainnet data), covering the ownership gate,
 unlock + burn, runtime pause, PNG export, the free Legendary, the full 1/1 escrow, identity/network changes, and no game
 for unowned, generation-0, owner-changed or RPC-error cases. The SDK's generic `npx friendsdk test` fails by design
-because its fixture doesn't answer Friend Studio's extra public reads (`tokenURI`, registry `portrait`). GitHub Actions reruns the unit tests, typecheck, SDK validation and build on every push before deploying the preview. The browser checks use a mocked wallet; a real-wallet playthrough on Robinhood mainnet is the remaining manual check.
+because its fixture doesn't answer Friend Studio's extra public reads (`tokenURI`, registry `portrait`). GitHub Actions reruns the unit tests, typecheck, SDK validation and build on every push before deploying the preview. The browser checks use a mocked wallet, and the builder also tested it with a real wallet and an owned Friend on Robinhood mainnet: it works.
 
 Credits: FriendSDK v0.1.2 and canonical Rare Friends Generations artwork; Pixelify Sans (SIL OFL 1.1). Traits, UI and
 the GIF encoder are original. Limitations: state is per session (the sandbox has no storage); script downloads are
